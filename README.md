@@ -37,27 +37,46 @@ It uses **Cypress.js** because it provides modern, developer-friendly tooling wi
 
 ### 1. Clone the Repository
 
+```bash
 git clone https://github.com/NicolasU94/Qubika-Ex3-Ugarte.git
-cd Qubika-Ex3-Ugarte 2. Install dependencies
+cd Qubika-Ex3-Ugarte
+```
+
+### 2. Install Dependencies
+
+```bash
 npm install
+```
 
-🧪 Running Tests
-Run Cypress in interactive mode:
+## 🧪 3. Running Tests
+
+### Run Cypress in interactive mode:
+
+```bash
 npx cypress open
+```
 
-This opens the Cypress Test Runner, where you can manually run your test specs.
+### Run Cypress in headless mode (CI-friendly):
 
-Run Cypress in headless mode (CI-friendly):
+```bash
 npx cypress run
+```
+
 You’ll see results directly in your terminal, and videos/screenshots (if configured) will be saved in the cypress/videos and cypress/screenshots folders.
 
-Run Specific specs in headless mode:
+### Run Specific specs in headless mode:
 
 To run the CategoriesE2E Spec
+
+```bash
 npx cypress run --spec "cypress/e2e/login.cy.js,cypress/e2e/CategoriesE2E.cy.js
+```
 
 To run the LoginE2E Spec
+
+```bash
 npx cypress run --spec "cypress/e2e/login.cy.js,cypress/e2e/LoginE2E.cy.js
+```
 
 ## 📁 Project Structure
 
@@ -75,9 +94,13 @@ Qubika-Ex3-Ugarte/
 ├── cypress.config.js              # Cypress configuration file
 ├── package.json                   # Project metadata and test scripts
 └── README.md                      # Documentation and setup instructions
+```
 
 📄 Notes
 This suite includes combined API and UI testing, as required by Exercise 3.
 
 Ensure that the backend API (https://api.club-administration.qa.qubika.com) and web frontend are available before running tests.
+
+```
+
 ```
