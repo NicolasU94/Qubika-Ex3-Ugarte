@@ -1,40 +1,45 @@
-# Qubika-Ex3-Ugarte
+# 📘 Qubika-Ex3-Ugarte
 
-Qubika QA Automation Challenge Exercise 3. Cypress.js E2E Automation.
+## Qubika QA Automation Challenge – Exercise 3
 
-Exercise 3 requirements:
-Instructions:
-Choose an automation framework and automate the following workflow on the Qubika Sports
-Club management website. This should be an e2e, automating the API and the UI side in the
-same test.
+**Framework:** Cypress.js  
+**Author:** Nicolas Ugarte
 
-1. Create a new user through API and save the user information. Find Qubika Sports Club
-   Management System Swagger here.
-2. Go to Qubika Sports Club Management System
-3. Validate that the login page is displayed correctly (make any relevant validation that you
-   consider necessary)
-4. Log in with the created user
-5. Validate that the user is logged in
-6. Once the user is logged in:
-   a) Go to the Category page
-   b) Create a new category and validate that the category was created successfully
-   c) Create a sub category and validate it is displayed in the Categories list.
+---
 
-This exercise should be delivered via a repository URL of your choice (Remember to make the
-repository public or provide access). Additionally, in the project, you should include a README
-file explaining the solution, why you chose that framework, detailing enhancements, and
-providing instructions for running the tests.
+## 📝 Challenge Requirements
 
-🧪 Qubika Sports Club Cypress Test Suite
-This repository contains an automated end-to-end Cypress test suite for the Qubika Sports Club Management System, covering API and UI workflows such as user registration, login, and category/subcategory creation. The automation was done in Cypress.js since the framework offers good options to build a solution that integrates API and UI automation in a modern language like js. The solution was done following guidelines and requirements in the Exercise 3 of the Qubika challenge as detailed above.
+> **Automate the following end-to-end flow (UI + API combined) for the Qubika Sports Club Management System.**
 
-🚀 Setup Instructions
+1. ✅ Create a new user via API and save the user information.
+2. ✅ Navigate to the [Qubika Sports Club Management System](https://club-administration.qa.qubika.com).
+3. ✅ Validate that the login page is displayed correctly.
+4. ✅ Log in using the newly created user.
+5. ✅ Validate successful login.
+6. ✅ After login:
+   - Go to the Category page
+   - Create a new **Category** and validate its creation
+   - Create a **Subcategory** and ensure it appears correctly in the list
 
-1. Clone the repository
-   git clone https://github.com/NicolasU94/Qubika-Ex3-Ugarte.git
-   cd Qubika-Ex3-Ugarte
-2. Install dependencies
-   npm install
+> 👉 Swagger documentation for the API is available [here](https://api.club-administration.qa.qubika.com/swagger-ui.html).
+
+---
+
+## 🧪 Qubika Sports Club Cypress Test Suite
+
+This project contains Cypress E2E automation for the Qubika Sports Club Management System.
+
+It uses **Cypress.js** because it provides modern, developer-friendly tooling with strong support for **both UI and API automation** in the same test flow. This made it ideal for the hybrid requirements of Exercise 3.
+
+---
+
+## 🚀 Setup Instructions
+
+### 1. Clone the Repository
+
+git clone https://github.com/NicolasU94/Qubika-Ex3-Ugarte.git
+cd Qubika-Ex3-Ugarte 2. Install dependencies
+npm install
 
 🧪 Running Tests
 Run Cypress in interactive mode:
@@ -54,21 +59,25 @@ npx cypress run --spec "cypress/e2e/login.cy.js,cypress/e2e/CategoriesE2E.cy.js
 To run the LoginE2E Spec
 npx cypress run --spec "cypress/e2e/login.cy.js,cypress/e2e/LoginE2E.cy.js
 
-🧰 Project Structure
-├── cypress
-│ ├── e2e # All test specs
-│ ├── support
-│ │ ├── LoginPage.js # Page Object Model for login screen functionalities
-│ │ ├── DashboardPage.js # Page Object Model for dashboard screen functionalities
-│ │ ├── CategoriesPage.js# Page Object Model for categories screen functionalities
-│ │ └── commands.js # Custom Cypress commands
-├── cypress.config.js # Cypress configuration
-├── package.json # NPM project metadata and scripts
+## 📁 Project Structure
 
-⚙️ Recommended NPM Scripts (Optional)
-You can add these to your package.json for convenience:
+```bash
+Qubika-Ex3-Ugarte/
+├── cypress/
+│   ├── e2e/                       # Test spec files
+│   │   ├── LoginE2E.cy.js         # Login test
+│   │   └── CategoriesE2E.cy.js    # Main test: category + subcategory
+│   ├── support/
+│   │   ├── LoginPage.js           # Page Object Model for Login page
+│   │   ├── DashboardPage.js       # Page Object Model for Dashboard page
+│   │   └── CategoriesPage.js      # Page Object Model for Categories page
+│   └── commands.js                # (Optional) Custom Cypress commands
+├── cypress.config.js              # Cypress configuration file
+├── package.json                   # Project metadata and test scripts
+└── README.md                      # Documentation and setup instructions
 
 📄 Notes
 This suite includes combined API and UI testing, as required by Exercise 3.
 
 Ensure that the backend API (https://api.club-administration.qa.qubika.com) and web frontend are available before running tests.
+```
